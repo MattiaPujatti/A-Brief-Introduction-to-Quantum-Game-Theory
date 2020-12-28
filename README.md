@@ -7,3 +7,5 @@ In particular, this repository contains a summary paper, that I had to submit, m
 providing also new interesting solutions that are absent in their classical counterpart.
 
 The paper is inteded for people with basically no background in quantum information theory (there is also a small appendix to remark some concepts) and just a few knowledge of quantum mechanics. For this reason, people that already have it may found it a bit dispersive: I apologize, but I had some standards to respect.
+
+It is also provided a small Jupyter Notebook containing the Python implementation of the two problems written above, especially in order to plot the utility of both players as function of their quantum strategies.
