@@ -1,0 +1,40 @@
+\begin{thebibliography}{1}
+
+\bibitem{Flitney_Abbott_introduction}
+D.~Abbott A.~P.~Flitney.
+\newblock An introduction to quantum game theory.
+\newblock {\em Fluctuation and Noise Letters}, 82(4):R175–R187, 2002.
+\newblock URL: \url{https://arxiv.org/abs/quant-ph/0208069v2}, \href
+  {https://doi.org/10.1103/physrevlett.82.1052}
+  {\path{doi:10.1103/physrevlett.82.1052}}.
+
+\bibitem{Eisert_1999}
+Jens Eisert, Martin Wilkens, and Maciej Lewenstein.
+\newblock Quantum games and quantum strategies.
+\newblock {\em Physical Review Letters}, 83(15):3077–3080, Oct 1999.
+\newblock URL: \url{http://dx.doi.org/10.1103/PhysRevLett.83.3077}, \href
+  {https://doi.org/10.1103/physrevlett.83.3077}
+  {\path{doi:10.1103/physrevlett.83.3077}}.
+
+\bibitem{Meyer_1999}
+David~A. Meyer.
+\newblock Quantum strategies.
+\newblock {\em Physical Review Letters}, 82(5):1052–1055, Feb 1999.
+\newblock URL: \url{https://arxiv.org/abs/quant-ph/9804010}.
+
+\bibitem{ozhigov2013quantum}
+Yuri~I. Ozhigov.
+\newblock Quantum selfish gene (biological evolution in terms of quantum
+  mechanics).
+\newblock 2013.
+\newblock URL: \url{https://arxiv.org/pdf/1402.4713.pdf}, \href
+  {http://arxiv.org/abs/1402.4713} {\path{arXiv:1402.4713}}.
+
+\bibitem{invitation}
+E.~W. Piotrowski and J.~Sladkowski.
+\newblock An invitation to quantum game theory.
+\newblock {\em International Journal of Theoretical Physics}, 42(5):19, May
+  2003.
+\newblock URL: \url{https://arxiv.org/pdf/quant-ph/0211191.pdf}.
+
+\end{thebibliography}

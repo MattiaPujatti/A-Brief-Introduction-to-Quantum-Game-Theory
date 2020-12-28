@@ -1,0 +1,80 @@
+\hfill
+
+\section{Formalization of a Quantum Game}
+Basically, any quantum system that can be manipulated by at least one
+party and where the utility of the moves can be reasonably defined, quantified and ordered, may be conceived as a quantum game.\\
+The simpler way to fully specify a game in classical game theory is using its \textit{normal form} $\Gamma$, i.e. listing players, strategies and payoffs. For a quantum game, a couple of  additional terms have to be given, then the extension is straightforward:
+\[ \Gamma = \{ \mathcal{H}, \rho, (M_i)_{i=1,..,N}, (S_i)_{i\in M}, (u_i)_{i\in M} \} \]
+where $\mathcal{H}$ is the Hilbert space of the physical system, $\rho\in\mathcal{S}(\mathcal{H})$ is the initial state ($\mathcal{S}(\mathcal{H})$ is the associated state space), $M_i$ is the set of $N$ players while $S_i$ and $u_i$ are the available quantum strategies and payoffs associated to each of that players.\\
+A generic \textit{quantum strategy} $s_A\in S_A$ is a collection of admissible quantum operations, that are maps from $\mathcal{S}(\mathcal{H})$ onto itself and usually are supposed to be positive-defined and trace preserving operators. In many two-person problems, like the previous example $\mathcal{S}(\mathcal{H}) = SU(2)$.\\
+As anticipated in the first section, the extension of game theory to the quantum world is quite "natural", since the only thing to do is to re-adapt some definitions. In particular, the concepts of \textit{dominant strategy}, \textit{Nash equilibrium} and \textit{Pareto optimality} are formally identical but extended to include also quantum strategies.\\
+A full description of all the results found in these last 20 years in the field of quantum game theory would be very huge, and would be quite off topic respect to the initial purposes of this paper. For this reason, a deeper analysis will be reserved to a particular, and simple, class of games, that involve two players, each of them with a finite set of strategies, playing a static game of complete information. These are basically the foundations of classical game theory, since problems like these can be generalized and applied to much more complex tasks.\\
+Stick to the example seen before, there is another result coming from classical game theory, that is worth to recall: according to Von Neumann, not every two-person zero-sum finite game has an equilibrium in the set of pure strategies, but there is always an equilibrium at which each player follows a mixed strategy. By definition any other strategy deviating from the equilibrium would lead to a smaller expected payoff, and so it should never be chosen by a rational player. But this is not what shown instead in the quantum spin-flip game. The answer to this problem was found by A. Meyer, one of the initiators of quantum game theory, that was able to derive three interesting theorems (the proof can be found in the original article \cite{Meyer_1999}).
+\begin{theorem}
+There is always a mixed/quantum equilibrium for a two-person zero-sum
+game, at which the expected payoff for the player utilizing a quantum strategy is at least
+as great as his expected payoff with an optimal mixed strategy
+\end{theorem}
+Of course, the more interesting question is for which games there is a quantum strategy
+which improves upon the optimal mixed strategy, and another one is what happens if both players utilize quantum strategies.
+\begin{theorem}
+A two-person zero-sum game need not have a quantum/quantum equilibrium.
+\end{theorem}
+Here it is possible to recognize the equivalent classical result, in which several games (like odd/even or rock/paper/scissor for example) lack of pure strategy Nash equilibria. But, at the same time, this result suggests to look for the analogue of Von Neumann's theorem about mixed strategies.
+\begin{theorem}
+A two-person zero-sum game always has a mixed quantum/mixed quantum
+equilibrium.
+\end{theorem}
+
+\subsection{Quantum 2 x 2 Games}
+In traditional 2x2 games, usually there are two contenders that can choose a single move in a given finite set of available strategies. In order to construct a physical quantum model for these kind of problems, it is not enough to construct \textit{superpositions} of actions just as linear combinations of them (like for mixed strategies), but a further step is needed: it is necessary to produce an \textit{entanglement} between various moves. Entanglement is a peculiar quantum mechanics' concept without classical equivalent: if the strategies chosen generate this phenomenon, than in the two states composing the system (one for each player) cannot be anymore defined independently one of the other, and any action/modification/measure on the first will inevitably have repercussions also on the second.\\
+Always keep in mind that a classical game has to be a subset of its quantum version, and so anyone should be able to re-derive it as a particular case.\\
+The quantum formulation proceeds by assigning the possible
+outcomes of the classical strategies $D$ and $C$ (usually \textit{defect} and \textit{cooperate}) two basis vectors $\ket{D}$ and $\ket{C}$ in the Hilbert space of the two-state system (i.e. qubits). At each instance, the state of the game is described by a vector in the tensor product space $\mathcal{H}\otimes\mathcal{H}$, which is spanned by
+the classical game basis $\ket{CC}$, $\ket{CD}$, $\ket{DC}$, $\ket{DD}$, where
+the first and second entry refer to Alice’s and Bob’s qubit,
+respectively. A generic game can be represented by a simple quantum circuit (\ref{qc:2x2game}, \cite{Flitney_Abbott_introduction}):
+\begin{itemize}[noitemsep]
+	\item[-] In the first part of the system, the game is built taking two classical strategies (represented as separated qubits) to which a gate $\hat{J}$ is applied: this operator generates the entanglement between the two qubits, effectively introducing non-classical effects in the game (without using it, the problem would be equivalent to the classical one, when solved using mixed strategies); the game's initial state vector is now $\ket{\psi_0} = \hat{J}\ket{CC}$ (the initial choice of $\ket{C}$ or $\ket{D}$ is meaningless, as long as the other operations are "tuned" correctly).
+	\item[-] $\hat{U}_A$ an $\hat{U}_B$ are the quantum strategies effectively selected by Alice and Bob: as anticipated in the spin-flip example, these have to be represented by unitary trace-preserving operators, most of the time in $\mathcal{H}=SU(2)$. In a more general treatment, each player should be allowed to use any local operation that quantum mechanics provide, that is applicable to the problem; the fact is that an eventual analysis of all the possible cases would probably fill up an entire book and would not be even necessary, since the solutions found in $SU(2)$ are usually better (and simpler) than all the other.
+	\item[-] The last part of the circuit consists in a disentangling gate $\tilde{J}$, that finally separates the players' states, allowing a measurement (projective measure in the original basis $\{\ket{C},\ket{D}\}$). Then it's just about consulting the payoff's table.
+	\item[-] Just a couple of remarks about $\hat{J}$ and $\tilde{J}$:
+	\begin{itemize}
+		\item $\hat{J}$ is a unitary operator, symmetric with respect to the interchange of the two players, and known by both of them and so is common knowledge;
+		\item since the classical game was required to be a subset of the quantum one, necessary $\hat{J}$ commutes with the direct product of any pair of
+classical moves:
+		\[ \comm{\hat{J}}{\hat{C}\otimes\hat{C}} = \comm{\hat{J}}{\hat{D}\otimes\hat{D}} = \comm{\hat{J}}{\hat{C}\otimes\hat{D}} = 0 \]
+		Moreover: $\tilde{J} = \hat{J}^\dagger$.	
+	\end{itemize}
+\end{itemize}
+\begin{figure}[!h]
+	\centering
+	\begin{quantikz}
+		\lstick{$\ket{C}$} & \lstick[wires=2]{$\ket{\psi_0}$} & \qw & \meter{}\\
+		\lstick{$\ket{C}$} & & \qw & \meter{}\\
+	\end{quantikz}
+	\caption{Quantum Circuit of a generic 2x2 game}
+	\label{qc:2x2game}
+\end{figure}
+
+The final part of the system consists, as said, by a couple of two-channels detectors, each of them labeled by $\sigma=C,D$, representing the outcome of the measure. The final state of the game prior to detection is given by
+\[ \ket{\psi_f} = \hat{J}^\dagger\left(\hat{U}_A\otimes\hat{U}_B\right)\hat{J}\ket{CC} \]
+Then, given a certain joint strategy selected by Alice and Bob, the final expected payoff of each of them can be computed with
+\[ \expval{i_\$} = \sum_{\sigma\sigma'} P_{\sigma\sigma'}\abs{\bra{\psi_f}\ket{\sigma\sigma'}}^2 \]
+where $\sigma\sigma'$ represents the possible outcomes of the detector ($CC$, $CD$, $DC$ and $DD$), and $P_{\sigma\sigma'}$ is the corresponding entry of player $i$ in the payoff matrix.\\
+If the actions' space is restricted to $SU(2)$, then each quantum strategy can be written as function of 2 parameters:
+\[ \hat{U}(\theta,\phi) = \begin{pmatrix}
+e^{i\phi}\cos\theta/2 & \sin\theta/2 \\ -\sin\theta/2 & e^{-i\phi}\cos\theta/2
+\end{pmatrix} \quad \theta\in[0,\pi], \phi\in[0,\frac{\pi}{2}] \]
+And also classical strategies have this kind of representation in which
+\[ \hat{C} = \hat{U}(0,0), \qquad \hat{D} = \hat{U}(\pi,0) \]
+while $\hat{U}(\theta,0)$ is the set including all classical mixtures.\\
+To conclude this section, exploiting quantum information together with abelian group theory, an explicit form of the entangling operator $\hat{J}$ is provided, and the nice thing is that this form is a function of a parameter $\gamma$ that can be seen a sort of "measure of entanglement":
+\[ \hat{J} = \exp\left(-i\gamma\hat{D}\otimes\hat{D}/2\right) \qquad \gamma\in[0,\frac{\pi}{2}] \]
+For a separable game $\gamma=0$, and the joint probabilities $P_{\sigma\sigma'}$ factorize for all possible pairs of strategies. A different situation holds for $\gamma = \pi/2$, that corresponds to states that are maximally entangled, and so the game played is as far as possible from its classical counterpart.
+
+
+
+
+
+

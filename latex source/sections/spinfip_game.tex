@@ -1,0 +1,73 @@
+\hfill
+
+\section{Spin-Flip Game}
+In this section it will be provided an example of a game in which a "quantum player" can, in some situations, achieve better results than a classical one \cite{invitation}.\\
+Let's start considering a modern version of a classic game theory problem, the penny-flip game, in which, instead of a coin, players use spin-1/2 particles (e.g. electrons) and distinguish between two possible outcomes depending on the spin state of such system, that can be either up or down. The game starts taking the particle initially set in a spin-up state, $\ket{\uparrow}$, then the players, Alice (A) and Bob (B), alternatively (A first, then B, then again A), can decide to flip the spin or do nothing.\\
+Always remember that this is no more a classical but a quantum system, and so its actual state at any time will not be just "only spin-up" or "only spin-down", but a quantum superposition of the two. This means that, in the end, if the particle is in a generic state $a\ket{\uparrow}+b\ket{\downarrow}$, with $\abs{a}^2 + \abs{b}^2 = 1$, $a,b\in\mathds{C}$, a (quantum projective) measure on it will return just "spin-up" or "spin-down" with probabilities $\abs{a}^2$ and $\abs{b}^2$ respectively.\\
+A wins if, at the end, the resulting spin is up, while B wins if it is down. This is a two-players zero sum static game of incomplete information, meaning that none of the contenders will know which strategy his opponent will choose, and the final payoffs will be equal and opposite. The problem can be analyzed using a proper bi-matrix of payoffs, in which the columns represent B's strategy, that is just a single action selected from the available set $\{F,N\}$ where $F$ stands for "flip" and $N$ for "no flip", while the rows represent A's strategies, that are instead pairs of actions (because A has two turns). 
+\[ \begin{blockarray}{cccc}
+& & \text{Player B}&\\
+& & N & F\\
+\begin{block}{cc[cc]}
+& NN &1,-1 &  -1,1 \\
+\text{Player A} & NF & -1,1 & 1,-1 \\
+& FN & -1,1 & 1,-1 \\
+& FF & 1,-1 &  -1,1 \\
+\end{block}
+\end{blockarray} \]
+The entries of the matrix are, as the name suggests, the payoffs for players A and B respectively, at the end of the game.\\
+For a better understanding of the problem, it can be useful to construct a manageable mathematical framework: a quantum system made up only by one spin-1/2 particle is defined in an Hilbert space $\mathcal{H}$ of dimension 2, and the most natural basis that we can construct for such space is made just by the two spin's eigenstates $\{\ket{\uparrow}, \ket{\downarrow}\}$. Using the $\mathds{C}^2$ representation:
+\[ \ket{\uparrow} = \begin{pmatrix} 1\\0\\ \end{pmatrix} \qquad \ket{\downarrow} = \begin{pmatrix} 0\\1\\ \end{pmatrix} \]
+Pure strategies, instead, has to be defined as unitary operators over $\mathcal{H}$, i.e. 2x2 matrices in $SU(2)$, acting by left multiplication on the vectors representing the state of the spin. In particular, the strategies $F$ and $N$ described before, can be represented as:
+\[ \hat{F} = \begin{pmatrix} 0&1\\1&0\\ \end{pmatrix} \qquad \hat{N} = \mathds{1} = \begin{pmatrix} 1&0\\0&1\\ \end{pmatrix} \]
+A generic \textit{mixed strategy}, so a linear combination of $F$ and $N$ with probabilities $p$ and $1-p$ respectively, can be constructed consequently:
+\[ \hat{m} = \begin{pmatrix} 1-p & p\\ p&1-p\\ \end{pmatrix} \]
+As last clarification, it may be useful to introduce the representation of quantum states via density matrices: in this case
+the initial state of the problem considered can be written as
+\[ \ket{\psi_0}=\ket{\uparrow} \longrightarrow \rho_0 = \ket{\uparrow}\bra{\uparrow} = \begin{pmatrix} 1\\0\\ \end{pmatrix}\begin{pmatrix} 1&0\\ \end{pmatrix} = \begin{pmatrix} 1&0\\0&0\\ \end{pmatrix} \]
+In order to exploit this representation, pure strategies $U$ have now to be applied as contractions over density matrices, while mixed strategies are, as always, just convex combination of them:
+\[ \rho_{pure} = U\rho_0U^\dagger \qquad \rho_{mixed}=pU_1\rho U_1^\dagger+(1-p)U_2\rho U_2^\dagger \]
+Back to the original problem, suppose that only Alice has studied quantum mechanics and can apply these new quantum strategies, while Bob didn't and so is limited to classical mixtures. First move is of player A, that decides to apply the following operator to the spin in the initial state
+\[ U_1 \equiv U(a,b) = \begin{pmatrix} a&b\\\bar{b}&-\bar{a}\end{pmatrix} \qquad \rho_1 = U_1\rho_0U_1^\dagger = \begin{pmatrix} a\bar{a}&ab\\\bar{a}\bar{b}&b\bar{b}\end{pmatrix} \]
+Next is player B's turn, that selects a generic mixed strategy:
+\[ \begin{aligned} \rho_2 &= p\hat{F}\rho_1\hat{F}^\dagger + (1-p)\hat{N}\rho_1\hat{N}^\dagger =\\
+&= \begin{pmatrix} pb\bar{b}+(1-p)a\bar{a}&p\bar{a}\bar{b}+(1-p)ab\\ pab +(1-p)\bar{a}\bar{b}&pa\bar{a}+(1-p)b\bar{b}\\ \end{pmatrix} \end{aligned} \]
+Given the density matrix of a final state, the expected payoffs of that configuration can be computed considering the probability that the outcome of a projective measure in such state returns $\ket{\uparrow}$ or $\ket{\downarrow}$. Since A has bet on "spin-up" and B on "spin-down" the final utility values will be:
+\[ payoff_A = p_\uparrow\cdot(+1) + p_\downarrow\cdot(-1) = -payoff_B \]
+where $p_\uparrow$ and $p_\downarrow$ are given by the diagonal entries of $\rho$ (formally they can be computed as expectation values: $p_\uparrow=\bra{\uparrow}\rho\ket{\uparrow}$, $p_\downarrow=\bra{\downarrow}\rho\ket{\downarrow}$).\\
+Considering just this restricted two-moves game, its Nash equilibrium can be computed by reasoning on the quantities in the last density matrix $\rho_2$:
+\begin{itemize}[noitemsep]
+	\item[-] setting $p=1/2$, both diagonal terms of $\rho_2$ will be equal to $1/2$, meaning that Bob's strategy would lead him an expected payoff of 0, independently of Alice's actions;
+	\item[-] if A were to employ any strategy for which $a\bar{a}\neq b\bar{b}$, B could instead obtain an expected payoff of $\abs{a\bar{a}-b\bar{b}}>0$ just by setting $p=0,1$ to whether $b\bar{b}\neq a\bar{a}$, or the reverse;
+	\item[-] similarly, if Bob were to choose a mixed strategy with $p\neq 1/2$, Alice could maximize her payoff up to $\abs{2p-1}$ by setting $a=1$ when $p<1/2$ or $b=1$ in the other case. 
+\end{itemize}
+Thus, the mixed/quantum equilibria for this restricted game are pairs
+\[ NE = \left\{ U(a,b), \;\left(\frac{1}{2}\hat{F}+\frac{1}{2}\hat{N}\right) \right\} \qquad \text{with  } a\bar{a}=\frac{1}{2}=b\bar{b}	 \]
+and the outcome is the same as if both players utilize optimal mixed strategies $(1/2,1/2)$.\\
+But Alice has another move at her disposal ($U_3$), which again transforms the state of the electron by conjugation as $\rho_3=U_3\rho_2U_3^\dagger$. If a particular operation is considered (in quantum information this is the \textit{Hadamard Gate})
+\[ U_1 = U\left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right) = U_3 = \frac{1}{\sqrt{2}}\begin{pmatrix} 1&1\\1&-1\end{pmatrix} \]
+the first application puts the electron in a quantum superposition of both up and down states, $\ket{\psi_1} = 1/\sqrt{2}\left(\ket{\uparrow}+\ket{\downarrow}\right)$, which is therefore invariant under any mixed strategy selected by Bob during his turn; the fact is that Alice's last move inverts her first action projecting the system into the state $\rho_3=\ket{\uparrow}\bra{\uparrow}$, and so the electron will have, with probability 1, spin-up at the end of the game. \\
+Since A can do no better than winning with probability 1, this is an optimal quantum strategy for her, and all the pairs 
+\[ \left\{ p\hat{F}+(1-p)\hat{N}, \; U\left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right), \; U\left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right) \right\} \]
+are mixed/quantum equilibria of the game, with final payoffs of $(1,-1)$ for the two players.\\
+The main purpose for this game being illustrated, is to teach that quantum mechanics can, in some scenarios, offer profitable strategies over the classical ones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
