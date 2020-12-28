@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.12.22)  27 DEC 2020 22:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.12.22)  28 DEC 2020 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1041,7 +1041,7 @@ LaTeX Info: Redefining \nameref on input line 11.
 
  ABD: EveryShipout initializing macros
 (./sections/intro.tex
-<pictures/LogoPOD.jpg, id=27, 513.92pt x 513.92pt>
+<pictures/LogoPOD.jpg, id=31, 513.92pt x 513.92pt>
 File: pictures/LogoPOD.jpg Graphic file (type jpg)
 <use pictures/LogoPOD.jpg>
 Package pdftex.def Info: pictures/LogoPOD.jpg  used on input line 5.
@@ -1091,7 +1091,21 @@ t/10 ; []\OT1/cmr/m/n/10 ]
 
 LaTeX Warning: Reference `' on page 4 undefined on input line 26.
 
-[4]) (./report.bbl
+
+LaTeX Warning: Reference `' on page 4 undefined on input line 27.
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
+
+ []
+
+
+LaTeX Warning: Reference `' on page 5 undefined on input line 41.
+
+
+LaTeX Warning: Reference `' on page 5 undefined on input line 45.
+
+) (./report.bbl
 Underfull \hbox (badness 3568) in paragraph at lines 4--10
 []\OT1/cmr/m/n/10 D. Ab-bott A. P. Flit-ney.  An in-tro-duc-tion to
  []
@@ -1130,16 +1144,14 @@ Underfull \hbox (badness 1642) in paragraph at lines 26--32
 \OT1/cmr/m/n/10 log-i-cal evo-lu-tion in terms of quan-tum me-chan-ics).
  []
 
-) [5
-
-]
+) [5]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
  (./report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 8AB0B37D35E5C36B963ADE7B50885E49;316.
+(rerunfilecheck)             Checksum: C2A64157773C9E0287287A19D32B2C30;401.
 
 
 LaTeX Warning: There were undefined references.
@@ -1147,10 +1159,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 26824 strings out of 480906
- 509238 string characters out of 5910771
+ 26826 strings out of 480906
+ 509268 string characters out of 5910771
  836050 words of memory out of 5000000
- 41801 multiletter control sequences out of 15000+600000
+ 41802 multiletter control sequences out of 15000+600000
  547044 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,16n,113p,1175b,1693s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1158,20 +1170,21 @@ Here is how much of TeX's memory you used:
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on report.pdf (5 pages, 246901 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
+Output written on report.pdf (5 pages, 262279 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 159 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
