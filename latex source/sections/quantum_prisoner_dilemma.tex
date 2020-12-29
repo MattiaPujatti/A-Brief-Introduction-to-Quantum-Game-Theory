@@ -2,6 +2,8 @@
 
 \section{Quantum Prisoners' Dilemma}
 In this section will be analyzed a canonical non-zero sum game usually known as the prisoners' dilemma. In these kind of games, in contrast to zero-sum games, the two players no longer appear in strict opposition to each other, but may rather benefit from mutual cooperation. \\
+\textit{
+Note: all the plots shown in this section have been realized in Python: the original code is contained in a Jupyter Notebook that can be found on Github \cite{Pujatti_github}. It may be useful to give a look there if interested in a computational implementation of this problem and/or a deeper overview of it.}\\
 There are two players, A and B, that are thieves caught by the police, which are being questioned and can choose among two strategies, Mum(M) or Fink(F). The payoffs are distributed according table \ref{eq:pris_dilemma} and, as usually, the objective of each player is to maximize his or her individual utility.
 \begin{equation}
 \begin{blockarray}{cccc}
@@ -15,7 +17,7 @@ There are two players, A and B, that are thieves caught by the police, which are
 \label{eq:pris_dilemma}
 \end{equation}
 Analyzing the problem using classical game theory, one can conclude that the best strategy to be played is found at the Nash Equilibrium, i.e. playing $\{FF\}$. The "dilemma" in the name of the game stands exactly for this: $\{FF\}$ is a strategy that is Pareto dominated by $\{MM\}$, so both players have, at least from a theoretical point of view, the possibility of obtaining an higher payoff simply unilaterally changing their own strategies, but the common rationality instead force them to play $F$.\\
-But when the problem is instead reformulated in the quantum context \cite{Eisert_1999}, it can be proven that :
+But when the problem is instead reformulated in the quantum context \cite{Eisert_2020}, it can be proven that :
 \begin{itemize}[noitemsep]
 	\item[-] there exists
 a particular pair of quantum strategies which always gives high reward and is a Nash equilibrium;
@@ -23,17 +25,26 @@ a particular pair of quantum strategies which always gives high reward and is a 
 against any classical strategy.
 \end{itemize}
 According to the formalism presented in the previous section, assuming that each player is able to use quantum strategies, than the available actions at the beginning of the game are represented by operators in $SU(2)$ (unitary and trace-preserving 2x2 matrices). Moreover, in order to properly construct a quantum game, also a dose of entanglement, adjusted by the parameter $\gamma$, is needed.\\
-For $\gamma=0$, according to figure \ref{}, that shows A's expected payoff in this configuration, for any possible choice $\hat{U}_B$ of B, the first player's utility is maximized if A selects to play $\hat{F}$. But since the game in this case is symmetric, the same reasoning can be applied to player B. This means that $\{\hat{F},\hat{F}\}\equiv\hat{F}\otimes\hat{F}$ is an equilibrium in dominant strategies. Indeed separable games ($\gamma=0$), manifest the same behavior as their classical counterpart, bringing also to the same results.\\
+For $\gamma=0$, according to figure \ref{fig:utilA_gamma0}, that shows A's expected payoff in this configuration, for any possible choice $\hat{U}_B$ of B, the first player's utility is maximized if A selects to play $\hat{F}$. But since the game in this case is symmetric, the same reasoning can be applied to player B. This means that $\{\hat{F},\hat{F}\}\equiv\hat{F}\otimes\hat{F}$ is an equilibrium in dominant strategies. Indeed separable games ($\gamma=0$), manifest the same behavior as their classical counterpart, bringing also to the same results.\\
+
+\begin{figure}[!ht]
+	\centering
+	%\includegraphics[scale=1]{pictures/}
+	\caption{Minimum guaranteed payoff for player A, in a game with $\gamma=0$, given all the possible strategies chosen by B (source: \cite{Pujatti_github})}
+	\label{fig:utilA_gamma0}
+\end{figure}
+
 The situation is entirely different for a maximally entangled game, with $\gamma=\pi/2$: this time, any pair of strategies chosen will have no counterpart in the classical domain, providing new and interesting solutions. To be precise, one can always re-derive the original prisoners' dilemma if both players choose actions of the type $\hat{U}(\pi/2,0)$. Using the same representation as before, according to the payoff plot \ref{} of player A, if B goes $\hat{F}$, then A's best reply would be the quantum strategy defined by
 \[ \hat{Q} \equiv \hat{U}(0,\frac{\pi}{2}) = \begin{pmatrix} i&0\\0&-i \end{pmatrix} \]
 while if B instead chooses $\hat{M}$, then the best strategy would be $\hat{F}$. Thus, there is no dominant strategy left for the first player and, because of the symmetry of the game, the same reasoning can be applied to B, and this means that $\{\hat{F}\hat{F}\}$ is no longer an equilibrium in dominant strategies. In addition, the Nash equilibrium of the game is replaced by a new joint strategy of best replies (from which no rational player would deviate), i.e. $\{\hat{Q}\hat{Q}\}$. This is the new unique equilibrium of the game, and guarantees a final payoff of 3 for both players; in fact
 \[ payoff_A(\hat{Q},\hat{U}_B)=\cos^2\left(\frac{\theta}{2}\right)\left(3\sin^2\phi + \cos^2\phi \right)\leq 3 \quad \forall\theta,\phi \]
 and the same holds for B's payoff.\\
-Moreover, $\hat{Q}\otimes\hat{Q}$ is not just a Nash equilibrium but has also the property of being \textit{Pareto Optimal}, meaning that deviating from this pair of strategies it is not possible to increase the payoff of one playerwithout reducing the utility of the other. The solution of the classical game was not Pareto optimal: the only strategy with this property was the mutual cooperation, but such choice was not holdable by rational players without considering a multistage game (with carrot and stick or grim trigger approaches).\\
+Moreover, $\hat{Q}\otimes\hat{Q}$ is not just a Nash equilibrium but has also the property of being \textit{Pareto Optimal}, meaning that deviating from this pair of strategies it is not possible to increase the payoff of one player
+without reducing the utility of the other. The solution of the classical game was not Pareto optimal: the only strategy with this property was the mutual cooperation, but such choice was not holdable by rational players without considering a multistage game (with carrot and stick or grim trigger approaches).\\
 
 \subsection{Quantum player vs Classical opponent}
 What if the game was instead unfair like the spin-flip example presented in the second section, in the sense that quantum strategies are accessible only to one player?\\
-Suppose that A has studied quantum mechanics, so his state space is still $SU(2)$, while B is limited to select actions characterized by $\phi=0$: in this case A is well advise to play the so called \textit{miracle move} (according to Eisert et al. \cite{Eisert_1999})
+Suppose that A has studied quantum mechanics, so his state space is still $SU(2)$, while B is limited to select actions characterized by $\phi=0$: in this case A is well advise to play the so called \textit{miracle move} (according to Eisert et al. \cite{Eisert_2020})
 \[ \hat{M}\equiv\hat{Q}(\pi/2,\pi/2)=\frac{1}{\sqrt{2}}\begin{pmatrix} i&-1\\1&-i \end{pmatrix}  \]
 that guarantees the following payoffs
 \[ payoff_A\left(\hat{M},\hat{U}(\theta,0)\right) \geq 3 \quad payoff_B\left(\hat{M},\hat{U}(\theta,0)\right) \leq \frac{1}{2}  \]

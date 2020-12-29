@@ -8,13 +8,14 @@ D.~Abbott A.~P.~Flitney.
   {https://doi.org/10.1103/physrevlett.82.1052}
   {\path{doi:10.1103/physrevlett.82.1052}}.
 
-\bibitem{Eisert_1999}
-Jens Eisert, Martin Wilkens, and Maciej Lewenstein.
-\newblock Quantum games and quantum strategies.
-\newblock {\em Physical Review Letters}, 83(15):3077–3080, Oct 1999.
-\newblock URL: \url{http://dx.doi.org/10.1103/PhysRevLett.83.3077}, \href
-  {https://doi.org/10.1103/physrevlett.83.3077}
-  {\path{doi:10.1103/physrevlett.83.3077}}.
+\bibitem{Eisert_2020}
+Martin; Lewenstein~Maciej Eisert, Jens;~Wilkens.
+\newblock Erratum: Quantum games and quantum strategies [phys. rev. lett. 83,
+  3077 (1999)].
+\newblock {\em Physical Review Letters}, 124, 4 2020.
+\newblock URL: \url{https://arxiv.org/pdf/quant-ph/9806088.pdf}, \href
+  {https://doi.org/10.1103/PhysRevLett.124.139901}
+  {\path{doi:10.1103/PhysRevLett.124.139901}}.
 
 \bibitem{Meyer_1999}
 David~A. Meyer.
@@ -36,5 +37,12 @@ E.~W. Piotrowski and J.~Sladkowski.
 \newblock {\em International Journal of Theoretical Physics}, 42(5):19, May
   2003.
 \newblock URL: \url{https://arxiv.org/pdf/quant-ph/0211191.pdf}.
+
+\bibitem{Pujatti_github}
+M.~Pujatti.
+\newblock A-brief-introduction-to-quantum-game-theory.
+\newblock
+  \url{https://github.com/MattiaPujatti/A-Brief-Introduction-to-Quantum-Game-Theory},
+  2020.
 
 \end{thebibliography}
