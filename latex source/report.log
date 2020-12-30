@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.12.22)  29 DEC 2020 11:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.12.22)  30 DEC 2020 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1041,7 +1041,7 @@ LaTeX Info: Redefining \nameref on input line 11.
 
  ABD: EveryShipout initializing macros
 (./sections/intro.tex
-<pictures/LogoPOD.jpg, id=31, 513.92pt x 513.92pt>
+<pictures/LogoPOD.jpg, id=35, 513.92pt x 513.92pt>
 File: pictures/LogoPOD.jpg Graphic file (type jpg)
 <use pictures/LogoPOD.jpg>
 Package pdftex.def Info: pictures/LogoPOD.jpg  used on input line 5.
@@ -1099,20 +1099,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
 [4]
 
-LaTeX Warning: Reference `' on page 5 undefined on input line 37.
+LaTeX Warning: Reference `' on page 5 undefined on input line 42.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
+Underfull \hbox (badness 10000) in paragraph at lines 40--45
 
  []
 
 
-LaTeX Warning: Reference `' on page 5 undefined on input line 51.
+LaTeX Warning: Reference `' on page 5 undefined on input line 52.
 
 
-LaTeX Warning: Reference `' on page 5 undefined on input line 55.
+LaTeX Warning: Reference `' on page 5 undefined on input line 56.
 
-) (./report.bbl
+) (./sections/quantum_battleofsexes.tex) (./report.bbl
 Underfull \hbox (badness 3568) in paragraph at lines 4--10
 []\OT1/cmr/m/n/10 D. Ab-bott A. P. Flit-ney.  An in-tro-duc-tion to
  []
@@ -1147,7 +1147,7 @@ Underfull \hbox (badness 2762) in paragraph at lines 12--19
 n/10 doi : 10 . 1103 / PhysRevLett .
  []
 
-
+[5]
 Underfull \hbox (badness 5817) in paragraph at lines 27--33
 []\OT1/cmr/m/n/10 Yuri I. Ozhigov.  Quan-tum self-ish gene (bi-o-
  []
@@ -1157,7 +1157,7 @@ Underfull \hbox (badness 1642) in paragraph at lines 27--33
 \OT1/cmr/m/n/10 log-i-cal evo-lu-tion in terms of quan-tum me-chan-ics).
  []
 
-[5]
+
 Underfull \hbox (badness 2245) in paragraph at lines 42--47
 []\OT1/cmr/m/n/10 M. Pu-jatti.  A-brief-introduction-to-quantum-game-
  []
@@ -1177,24 +1177,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--47
 ) [6
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: C2A64157773C9E0287287A19D32B2C30;401.
+(rerunfilecheck)             Checksum: 638280D621F567110FA914568D0B749D;451.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
  ) 
 Here is how much of TeX's memory you used:
- 26831 strings out of 480906
- 509335 string characters out of 5910771
+ 26837 strings out of 480906
+ 509480 string characters out of 5910771
  836243 words of memory out of 5000000
- 41804 multiletter control sequences out of 15000+600000
+ 41806 multiletter control sequences out of 15000+600000
  547044 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,16n,113p,1175b,1693s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1213,10 +1213,10 @@ sy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on report.pdf (6 pages, 266252 bytes).
+Output written on report.pdf (6 pages, 266693 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 74 words of extra memory for PDF output out of 10000 (max. 10000000)
 
