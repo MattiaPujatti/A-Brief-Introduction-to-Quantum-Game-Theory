@@ -38,7 +38,7 @@ where $p_\uparrow$ and $p_\downarrow$ are given by the diagonal entries of $\rho
 Considering just this restricted two-moves game, its Nash equilibrium can be computed by reasoning on the quantities in the last density matrix $\rho_2$:
 \begin{itemize}[noitemsep]
 	\item[-] setting $p=1/2$, both diagonal terms of $\rho_2$ will be equal to $1/2$, meaning that Bob's strategy would lead him an expected payoff of 0, independently of Alice's actions;
-	\item[-] if A were to employ any strategy for which $a\bar{a}\neq b\bar{b}$, B could instead obtain an expected payoff of $\abs{a\bar{a}-b\bar{b}}>0$ just by setting $p=0,1$ to whether $b\bar{b}\neq a\bar{a}$, or the reverse;
+	\item[-] if A were to employ any strategy for which $a\bar{a}\neq b\bar{b}$, B could instead obtain an expected payoff of $\abs{a\bar{a}-b\bar{b}}>0$ just by setting $p=0,1$ to whether $b\bar{b}> a\bar{a}$, or the reverse;
 	\item[-] similarly, if Bob were to choose a mixed strategy with $p\neq 1/2$, Alice could maximize her payoff up to $\abs{2p-1}$ by setting $a=1$ when $p<1/2$ or $b=1$ in the other case. 
 \end{itemize}
 Thus, the mixed/quantum equilibria for this restricted game are pairs
@@ -46,7 +46,7 @@ Thus, the mixed/quantum equilibria for this restricted game are pairs
 and the outcome is the same as if both players utilize optimal mixed strategies $(1/2,1/2)$.\\
 But Alice has another move at her disposal ($U_3$), which again transforms the state of the electron by conjugation as $\rho_3=U_3\rho_2U_3^\dagger$. If a particular operation is considered (in quantum information this is the \textit{Hadamard Gate})
 \[ U_1 = U\left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right) = U_3 = \frac{1}{\sqrt{2}}\begin{pmatrix} 1&1\\1&-1\end{pmatrix} \]
-the first application puts the electron in a quantum superposition of both up and down states, $\ket{\psi_1} = 1/\sqrt{2}\left(\ket{\uparrow}+\ket{\downarrow}\right)$, which is therefore invariant under any mixed strategy selected by Bob during his turn; the fact is that Alice's last move inverts her first action projecting the system into the state $\rho_3=\ket{\uparrow}\bra{\uparrow}$, and so the electron will have, with probability 1, spin-up at the end of the game. \\
+the first application puts the electron in a quantum superposition of both up and down states, $\ket{\psi_1} = 1/\sqrt{2}\left(\ket{\uparrow}+\ket{\downarrow}\right)$, which is therefore invariant under any mixed strategy selected by Bob during his turn; the fact is that Alice's last move inverts her first action projecting the system into the state $\rho_3=\ket{\uparrow}\bra{\uparrow}$, and so a measure over the electron will return, with probability 1, "spin-up" at the end of the game. \\
 Since A can do no better than winning with probability 1, this is an optimal quantum strategy for her, and all the pairs 
 \[ \left\{ p\hat{F}+(1-p)\hat{N}, \; U\left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right), \; U\left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right) \right\} \]
 are mixed/quantum equilibria of the game, with final payoffs of $(1,-1)$ for the two players.\\
