@@ -8,6 +8,20 @@ D.~Abbott A.~P.~Flitney.
   {https://doi.org/10.1103/physrevlett.82.1052}
   {\path{doi:10.1103/physrevlett.82.1052}}.
 
+\bibitem{Benjamin_2001}
+Simon~C. Benjamin and Patrick~M. Hayden.
+\newblock Multiplayer quantum games.
+\newblock {\em Physical Review A}, 64(3), Aug 2001.
+\newblock URL: \url{http://dx.doi.org/10.1103/PhysRevA.64.030301}, \href
+  {https://doi.org/10.1103/physreva.64.030301}
+  {\path{doi:10.1103/physreva.64.030301}}.
+
+\bibitem{Du_2000}
+Jiangfeng Du, Xiaodong Xu, Hui Li, Xianyi Zhou, and Rongdian Han.
+\newblock Nash equilibrium in the quantum battle of sexes game.
+\newblock 11 2000.
+\newblock URL: \url{https://arxiv.org/pdf/quant-ph/0010050.pdf}.
+
 \bibitem{Eisert_2020}
 Martin; Lewenstein~Maciej Eisert, Jens;~Wilkens.
 \newblock Erratum: Quantum games and quantum strategies [phys. rev. lett. 83,
@@ -16,6 +30,12 @@ Martin; Lewenstein~Maciej Eisert, Jens;~Wilkens.
 \newblock URL: \url{https://arxiv.org/pdf/quant-ph/9806088.pdf}, \href
   {https://doi.org/10.1103/PhysRevLett.124.139901}
   {\path{doi:10.1103/PhysRevLett.124.139901}}.
+
+\bibitem{kairon2020noisy}
+Pranav Kairon, Kishore Thapliyal, R.~Srikanth, and Anirban Pathak.
+\newblock Noisy three-player dilemma game: Robustness of the quantum advantage,
+  2020.
+\newblock \href {http://arxiv.org/abs/2004.04533} {\path{arXiv:2004.04533}}.
 
 \bibitem{Meyer_1999}
 David~A. Meyer.
