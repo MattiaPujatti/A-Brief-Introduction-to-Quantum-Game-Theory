@@ -8,51 +8,56 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib
+I was expecting a `,' or a `}'---line 105 of file bibliography.bib
+ : 
+ : @misc{Manzali,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Too many commas in name 1 of "Eisert, Jens; Wilkens, Martin; Lewenstein, Maciej" for entry Eisert_2020
 while executing---line 1415 of file plainurl.bst
 Warning--empty journal in Du_2000
 Too many commas in name 1 of "Eisert, Jens; Wilkens, Martin; Lewenstein, Maciej" for entry Eisert_2020
 while executing---line 1457 of file plainurl.bst
 Warning--empty journal in ozhigov2013quantum
-You've used 9 entries,
+You've used 10 entries,
             2882 wiz_defined-function locations,
-            695 strings with 6787 characters,
-and the built_in function-call counts, 3838 in all, are:
-= -- 399
-> -- 128
+            703 strings with 7004 characters,
+and the built_in function-call counts, 4167 in all, are:
+= -- 434
+> -- 136
 < -- 0
-+ -- 47
-- -- 36
-* -- 229
-:= -- 559
-add.period$ -- 34
-call.type$ -- 9
-change.case$ -- 45
++ -- 50
+- -- 38
+* -- 236
+:= -- 606
+add.period$ -- 38
+call.type$ -- 10
+change.case$ -- 49
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 101
-empty$ -- 380
-format.name$ -- 36
-if$ -- 1004
+cite$ -- 12
+duplicate$ -- 108
+empty$ -- 418
+format.name$ -- 38
+if$ -- 1097
 int.to.chr$ -- 0
-int.to.str$ -- 9
+int.to.str$ -- 10
 missing$ -- 7
-newline$ -- 55
-num.names$ -- 18
-pop$ -- 92
+newline$ -- 61
+num.names$ -- 20
+pop$ -- 105
 preamble$ -- 1
-purify$ -- 36
+purify$ -- 39
 quote$ -- 0
-skip$ -- 284
+skip$ -- 310
 stack$ -- 0
-substring$ -- 119
-swap$ -- 17
+substring$ -- 124
+swap$ -- 18
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 40
 warning$ -- 2
-while$ -- 21
-width$ -- 10
-write$ -- 113
-(There were 2 error messages)
+while$ -- 23
+width$ -- 12
+write$ -- 125
+(There were 3 error messages)

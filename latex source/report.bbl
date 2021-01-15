@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Flitney_Abbott_introduction}
 D.~Abbott A.~P.~Flitney.
@@ -36,6 +36,12 @@ Pranav Kairon, Kishore Thapliyal, R.~Srikanth, and Anirban Pathak.
 \newblock Noisy three-player dilemma game: Robustness of the quantum advantage,
   2020.
 \newblock \href {http://arxiv.org/abs/2004.04533} {\path{arXiv:2004.04533}}.
+
+\bibitem{Manzali}
+F.~Manzali.
+\newblock Introduzione alla teoria quantistica dell’informazione.
+\newblock \url{https://github.com/Einlar/InfoQuantistica}, 2019.
+\newblock Course held by professor Simone Montangero (ita only).
 
 \bibitem{Meyer_1999}
 David~A. Meyer.

@@ -46,11 +46,24 @@ classical moves:
 		Moreover: $\tilde{J} = \hat{J}^\dagger$.	
 	\end{itemize}
 \end{itemize}
+%\gategroup[wires=2,steps=2,style={dashed rounded corners, fill=blue!20, inner xsep=2pt}]{test}
+%\begin{figure}[!h]
+%	\centering
+%	\begin{quantikz}
+%		\lstick{$\ket{C}$}\gategroup[wires=1, steps=1, style={dashed, rounded corners, fill=blue!20}, background]{$\ket{\psi_0}$} & \gate[wires=2]{\hat{J}} & \qw & \gate{\hat{U}_A} & \gate[wires=2]{\hat{J}^\dagger} & \qw & \meter{}\\
+%		\lstick{$\ket{C}$} & \qw & \qw & \gate{\hat{U}_B} & & \qw & \meter{}\\
+%	\end{quantikz}
+%	\caption{Quantum Circuit of a generic 2x2 game}
+%	\label{qc:2x2game}
+%\end{figure}
+
+
 \begin{figure}[!h]
 	\centering
 	\begin{quantikz}
-		\lstick{$\ket{C}$} & \lstick[wires=2]{$\ket{\psi_0}$} & \qw & \meter{}\\
-		\lstick{$\ket{C}$} & & \qw & \meter{}\\
+		& \gategroup[2, steps=3, style={draw=red, line width=1.5pt, inner xsep=0.35cm, inner ysep=0.5cm}, label style={yshift=0.2cm}]{$\ket{\psi_0}$}\gategroup[2,steps=6,style={dashed, rounded corners,fill=blue!60, inner xsep=5pt},
+		background,label style={yshift=0.2cm, xshift=1cm}]{$\ket{\psi_f}$} & \lstick{$\ket{C}$} & \gate[wires=2]{\hat{J}} & \qw & \gate{\hat{U}_A} & \gate[wires=2]{\hat{J}^\dagger} & \meter{}\\
+		& {} & \lstick{$\ket{C}$} & \qw & \qw & \gate{\hat{U}_B} & & \meter{}
 	\end{quantikz}
 	\caption{Quantum Circuit of a generic 2x2 game}
 	\label{qc:2x2game}

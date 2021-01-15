@@ -1,0 +1,43 @@
+\hfill
+
+\section{Some concepts from Quantum Information Theory \cite{Manzali}}
+
+\subsection{Qubits}
+The actual calculus model implemented in classical computers is based on the implementation of functions from $n$ bits to $m$ bits, formally $f:\{0,1\}^n\to\{0,1\}^m$, where 0 and 1 are \textbf{distinguishable states} of our system.\\
+The quantum mechanical analogue of a classic bit is called \textbf{qubit}, that is a 2-dimensional, normalized, complex vector in an Hilbert space with basis $\{\ket{0},\ket{1}\}$, that is a set of two distinguishable (quantum) states: a \textit{fundamental} and an \textit{excited} one. From the \textbf{Superposition Principle} of QM it is immediately possible the form of a generic qubit		(in the traditional \textit{Dirac}'s or \textit{bra-ket}'s notation):
+\[ \ket{\psi} = \alpha\ket{0}+\beta\ket{1} \qquad \alpha,\beta\in\mathds{C}, \abs{\alpha}^2+\abs{\beta}^2=1 \]
+In QM, the framework in which observables are defined is usually given by an Hilbert space $\mathcal{H}$; but qubits are not properly elements of a vector space (so they are not simply vectors): more precisely qubits are quantum states, and quantum states are usually represented as \textbf{vector rays} in a projective space $\mathcal{P}\mathcal{H}$, since they are invariant under the application of a global phase (e.g. $\ket{\psi}$ and $e^{i\gamma}\ket{\psi}$ represent the same state because they produce the same expectation values). In quantum information, qubits are usually expressed in the $\mathds{C}^2$ representation, in term of a so called \textbf{Computational Basis}:
+\[ \ket{0} = \begin{pmatrix}1\\0\end{pmatrix} \qquad \ket{1} = \begin{pmatrix}0\\1\end{pmatrix} \] 
+One could ask if the "amount of information" stored in a qubit or in a bit is the same, but the answer is not so trivial: each quantum state is fully encoded by two complex numbers, and so one could potentially store an infinite information in its (infinite) amount of digits. The fact is that in the end, once the qubit is being measured, because of the projective nature of quantum measurements, the results can be only either 0 (w.p. $\abs{\alpha}^2$) or 1(w.p. $\abs{\beta}^2$), losing almost entirely the other information stored. However those complex numbers are still "alive" during the process and the transformations applied to the state, and can influence its evolution.\\
+Other advantages provided by the usage of qubits is the possibility of exploiting non-local effects, peculiar of quantum mechanics, like the entanglement, in order to implement circuits and algorithms with many more degrees of freedom than their classical counterparts.\\
+
+\subsection{Many-Body Systems}
+Given a quantum system made of N independent components, the state of such system can be written as the \textbf{tensor product} of the states of the components:
+\[ \ket{\psi} = \ket{\psi_1}\otimes\ket{\psi_2}\otimes\dots\otimes\ket{\psi_N} \]
+and the result will be defined in an Hilbert space that is a tensor product as well $\mathcal{H} = \mathcal{H_1}\otimes\dots\mathcal{H_N}$.\\
+In quantum information, for example for $N=2$, you need to extend the computational basis:
+\[ \ket{00} = \begin{pmatrix}1\\0\\0\\0\end{pmatrix} \quad \ket{01} = \begin{pmatrix}0\\1\\0\\0\end{pmatrix} \quad \ket{10} = \begin{pmatrix}0\\0\\1\\0\end{pmatrix} \quad \ket{11} = \begin{pmatrix}0\\0\\0\\1\end{pmatrix} \]
+Many-Body quantum systems are actually one of the areas of major interest in quantum information, especially because for a system of $N$ components, a complete description of its state in classical physics requires only $N$ bits, whereas in quantum physics it requires $2^N$ complex numbers. So this kind of problems usually scales exponentially with the number of atoms/bodies/parts, and scientists are always looking for models (e.g. the \textit{Ising Model}) and techniques in order to find complete but efficient solutions.\\
+
+\subsection{Entanglement}
+Not all the systems' states can be "splitted" as tensor products, since this is possible only when the parts are independent. But there are some situations in which many qubits show some kind of quantum correlation and they cannot be anymore be described one independently of the other. This phenomenon is known as \textbf{entanglement} and is one of the most interesting and mind blowing effects of quantum mechanics, because it has not a classical counterpart and is a non-local feature. If two qubits are entangled it is not possible to write them as $\ket{\psi_1}\otimes\ket{\psi_2}$, and any kind of measure or transformation on one of them will inevitably influence also the second, regardless of their actual position in the spacetime.\\
+
+\subsection{Density Matrices}
+A \textbf{density matrix} is a matrix that describes the statistical state, whether pure or mixed, of a system in quantum mechanics. If it is known that a certain system is in state $\ket{\psi_i}$ with probability $p_i$ (given a set of pure states with the relative probabilities), then the density matrix associated can be calculated with:
+\[ \rho = \sum_i\ket{\psi_i}\bra{\psi_i} \]
+The probability for any outcome of any well-defined measurement upon a system can be calculated from the density matrix simply tracing over it: given an observable $\hat{A}$, then its expectation value in a state described by $\rho$ is
+\[ \expval{\hat{A}} = Tr(\rho\hat{A}) \]
+%A generic density matrix $\rho$ have several interesting properties:
+%\begin{itemize}[noitemsep]
+%	\item[-] $\rho$ is hermitian;
+%	\item[-] $\Tr\rho=1$;
+%	\item[-] $\rho$ is a positive defined operator;
+%	\item[-] $\rho$ evolves according the Liouville-Von Neumann equation:
+%	\[ i\hslash\pdv{t}\rho(t) = \comm{\hat{H}}{\rho(t)} \]
+%\end{itemize}
+%The diagonal terms of a density matrix are called \textbf{population} terms, while the off-diagonal ones are the \textbf{coherences}; the latter are particularly relevant because they are index of the correlations among the different parts of the system: the bigger they are, the stronger will be the superposition among the single states.
+
+\subsection{Measurements}
+The process of extracting numerical information from a set of qubits is called measurement. There are several types of measurements in quantum mechanics, but the one mainly used in quantum information is the \textbf{Von Neumann projection}. Given a system in the state $\ket{\psi}$ and a generic observable of interest $\hat{A}$, that can be decomposed along its eigenstates as 
+\[ \hat{A} = \sum_i\lambda_i\ket{\phi_i}\bra{\phi_i} \]
+then, the result of a measure will be one of the eigenvalues $\lambda_i$, with probability $\abs{\bra{\phi_i}\ket{\psi}}^2$. Moreover, the state of the system immediately after the measurement will be exactly the eigenstate $\ket{\phi_i}$, with the same probability.
