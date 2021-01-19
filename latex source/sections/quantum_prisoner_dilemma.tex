@@ -3,7 +3,7 @@
 \section{Quantum Prisoners' Dilemma}
 In this section will be analyzed and simulated a canonical non-zero sum game usually known as the prisoners' dilemma. In these kind of games, in contrast to zero-sum games, the two players no longer appear in strict opposition to each other, but may rather benefit from mutual cooperation. \\
 \textit{
-Note: all the plots shown in this section have been realized in Python: the original code is contained in a Jupyter Notebook that can be found on Github \cite{Pujatti_github}. It may be useful to give a look there if interested in a computational implementation of this problem and/or a deeper overview of it.}\\
+Note. All the plots shown in this section have been realized in Python: the original code is contained in a Jupyter Notebook that can be found on Github \cite{Pujatti_github}. It may be useful to give a look there if interested in a computational implementation of this problem and/or a deeper overview of it.}\\
 There are two players, Alice and Bob, that are thieves caught by the police, which are being questioned, and can choose among two strategies, Mum (collaborating, C) or Fink (defecting, D). The payoffs are distributed according table \ref{eq:pris_dilemma} and, as usually, the objective of each player is to maximize his or her individual utility.
 \begin{equation}
 \begin{blockarray}{cccc}
@@ -80,22 +80,6 @@ and the plot realized is shown in figure \ref{fig:payoffs_entanglement_PD}.
 
 
 It is immediately possible to notice that under a certain threshold, in term of entanglement degrees, that is found to be around $\gamma_{th} = \arcsin\left(1/\sqrt{5}\right)\simeq 0.464$, the forced choice is playing $\hat{F}$; after such threshold, near to the maximum entanglement among the states, then the best reply is always the miracle move. An interesting fact, not shown by the graph because of the limited precision, is that the "strategy swap", from $\hat{F}$ to $\hat{Q}$ is much more discontinuous than how it appears: this is a clue that a phenomenon known as \textit{quantum phase transition} has occurs around $\gamma_{th}$.	
-
-\subsection{Quantum Battle of Sexes}
-
-Another game that may be interesting to reformulate in the quantum world is the Battle of Sexes, mainly because the steps are the same as of the Prisoners' Dilemma, and the only thing that effectively change is the payoff matrix. This time Alice and Bob are partners that agreed to meet at the cinema to watch a film: A would like to see a romance (R) movie, while B prefer a sci-fi (S), but anyway each of them would make a compromise in order to avoid going alone. The problem is again a static game of complete information with the payoff matrix shown in \ref{eq:battle_sexes}.
-\begin{equation}
-\begin{blockarray}{cccc}
-& & \text{Player B}&\\
-& & R & S\\
-\begin{block}{cc[cc]}
-\text{Player A} & S & 2,1 &  0,0 \\
-& S & 0,0 & 1,2 \\
-\end{block}
-\end{blockarray}
-\label{eq:battle_sexes}
-\end{equation}
-Applying classical game theory in order to find the equilibria of the problem is quite straightforward and confirm the existence of 3 NE: two pure strategy NE, i.e. $\{\hat{R}\hat{R}\}$ and $\{\hat{S}\hat{S}\}$, and one mixed strategy NE in $\left(2/3,1/3\right)$.
 
 
 

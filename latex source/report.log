@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.12.22)  15 JAN 2021 23:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.12.22)  19 JAN 2021 23:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1041,7 +1041,7 @@ LaTeX Info: Redefining \nameref on input line 11.
 
  ABD: EveryShipout initializing macros
 (./sections/intro.tex
-<pictures/LogoPOD.jpg, id=67, 513.92pt x 513.92pt>
+<pictures/LogoPOD.jpg, id=63, 513.92pt x 513.92pt>
 File: pictures/LogoPOD.jpg Graphic file (type jpg)
 <use pictures/LogoPOD.jpg>
 Package pdftex.def Info: pictures/LogoPOD.jpg  used on input line 5.
@@ -1094,7 +1094,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
  []
 
-<pictures/utilities_gamma0.pdf, id=120, 243.0681pt x 88.1694pt>
+<pictures/utilities_gamma0.pdf, id=116, 243.0681pt x 88.1694pt>
 File: pictures/utilities_gamma0.pdf Graphic file (type pdf)
 <use pictures/utilities_gamma0.pdf>
 Package pdftex.def Info: pictures/utilities_gamma0.pdf  used on input line 32.
@@ -1109,7 +1109,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--43
 
  []
 
-<pictures/payoffsBvsQ.pdf, id=123, 490.7724pt x 322.16347pt>
+<pictures/payoffsBvsQ.pdf, id=119, 490.7724pt x 322.16347pt>
 File: pictures/payoffsBvsQ.pdf Graphic file (type pdf)
 <use pictures/payoffsBvsQ.pdf>
 Package pdftex.def Info: pictures/payoffsBvsQ.pdf  used on input line 46.
@@ -1128,58 +1128,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--61
 
  []
 
-<pictures/PD_quantumvsclassical.pdf, id=146, 517.87024pt x 353.27583pt>
+<pictures/PD_quantumvsclassical.pdf, id=142, 517.87024pt x 353.27583pt>
 File: pictures/PD_quantumvsclassical.pdf Graphic file (type pdf)
 <use pictures/PD_quantumvsclassical.pdf>
 Package pdftex.def Info: pictures/PD_quantumvsclassical.pdf  used on input line
  64.
 (pdftex.def)             Requested size: 207.14441pt x 141.30782pt.
-<pictures/PD_payoffsentanglement.pdf, id=148, 507.83403pt x 370.33746pt>
+<pictures/PD_payoffsentanglement.pdf, id=144, 507.83403pt x 370.33746pt>
 File: pictures/PD_payoffsentanglement.pdf Graphic file (type pdf)
 <use pictures/PD_payoffsentanglement.pdf>
 Package pdftex.def Info: pictures/PD_payoffsentanglement.pdf  used on input lin
 e 76.
 (pdftex.def)             Requested size: 228.5232pt x 166.65031pt.
 ) (./sections/multiplayer_games.tex
-<pictures/multiplayer.pdf, id=151, 1227.58624pt x 694.595pt>
+<pictures/multiplayer.pdf, id=146, 1227.58624pt x 694.595pt>
 File: pictures/multiplayer.pdf Graphic file (type pdf)
 <use pictures/multiplayer.pdf>
 Package pdftex.def Info: pictures/multiplayer.pdf  used on input line 8.
 (pdftex.def)             Requested size: 245.5129pt x 138.91653pt.
- [6 <./pictures/PD_quantumvsclassical.pdf> <./pictures/PD_payoffsentanglement.p
-df
+) (./sections/conclusion.tex [6 <./pictures/PD_quantumvsclassical.pdf> <./pictu
+res/PD_payoffsentanglement.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./pictures/PD_payoffsentanglement.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
->]) (./sections/conclusion.tex) [7 <./pictures/multiplayer.pdf>]
-(./sections/appendix.tex
+>]) [7 <./pictures/multiplayer.pdf>] (./sections/appendix.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 3.
+(hyperref)                removing `\@ifnextchar' on input line 1.
 
 
-Underfull \hbox (badness 1303) in paragraph at lines 10--13
+Underfull \hbox (badness 1303) in paragraph at lines 8--11
 \OT1/cmr/m/n/10 Other ad-van-tages pro-vided by the us-age of qubits is
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--13
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--21
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-[8]) [9
-
-] (./report.bbl
+) [8] (./report.bbl
 Underfull \hbox (badness 2591) in paragraph at lines 4--10
 []\OT1/cmr/m/n/10 D. Ab-bott A. P. Flit-ney.  An in-tro-duc-tion to
  []
@@ -1223,7 +1220,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--73
 /cmr/m/n/10 ,
  []
 
-) [10
+) [9
 
 
 ]
@@ -1233,17 +1230,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 38C08F6A212773FC2A92A45081904CE8;987.
+(rerunfilecheck)             Checksum: 19A57A6BB5AC3FBD309B6207306BC03A;914.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
  ) 
 Here is how much of TeX's memory you used:
- 27080 strings out of 480906
- 515176 string characters out of 5910771
- 855383 words of memory out of 5000000
- 42018 multiletter control sequences out of 15000+600000
+ 27075 strings out of 480906
+ 515110 string characters out of 5910771
+ 855320 words of memory out of 5000000
+ 42016 multiletter control sequences out of 15000+600000
  547044 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,20n,114p,1904b,1689s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,20n,114p,1908b,1689s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -1259,10 +1256,10 @@ sy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on report.pdf (10 pages, 517752 bytes).
+Output written on report.pdf (9 pages, 514042 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 250 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 155 words of extra memory for PDF output out of 10000 (max. 10000000)
 
